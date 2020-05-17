@@ -1,0 +1,234 @@
+ /* reset do css */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+     background-color: white;
+     background-size: auto 100vh;
+     font-family: 'Roboto', sans-serif;
+     height:auto 100vh;
+     background-size: cover;
+     font-size: 12px;
+   }
+
+  /* se a tela tiver pelo menos 400px vai carregar estes estilos */
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  /* breakpoint */
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+ /* breakpoint */
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+    }
+  }
+
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color:rgb(218, 216, 216);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+  }
+
+  .menu a:hover {
+    background-color: white;
+  }
+  
+  a {
+    color:black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .img-botao{
+    height: 20px;
+    width: 40px;
+  }
+
+  .titulo {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    
+    animation: linear 1s animacaoTitulo forwards;
+  }
+
+  @keyframes animacaoTitulo {
+    from {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }  
+    to {
+        transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .site-subtitle,
+  .site-title {
+    color: black;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 4em;
+    font-family: 'Balsamiq Sans', cursive;
+  }
+  
+  .site-subtitle {
+   font-style: italic;
+   font-family: 'Fredoka One', cursive;
+  }
+
+  .sobre,
+  .contato,
+  .portfolio {
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;          
+      max-width: 1200px;
+    }
+  }
+
+  .sobre h2,
+  .contato h2,
+  .portfolio h2 {
+    color: black;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 1.5em;
+    font-size: 2em
+  }
+
+  .sobre p {
+    color: black;
+    margin-bottom: 1.2em;
+    text-indent: 1.4em;
+    text-align: justify;
+  }
+
+  .sobre a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .sobre a:hover {
+    background-color: rgb(87, 87, 87);
+    text-decoration: none;
+  }
+
+  .sobre .avatar {
+    margin-left: 2em;
+  }
+
+  .sobre .avatar img {
+    border-radius: 50%;
+  }
+
+  @media (min-width: 600px) {
+    .sobre .avatar{
+    float: right;
+    } 
+  }
+  
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+    grid-template-columns: 260px 260px 260px;
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em - 48px);
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  /* se for mudar a background do portfolio
+  .portfolio {
+    background-color: darkseagreen;
+  }
+  */
+  .img-portfolio {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.2) rotate(5deg);
+  }
+
+  .contato .icons {
+   text-align: center;
+ }
+
+  .contato a {
+   color: whitesmoke;
+   font-size: 6em;
+   transition: text-shadow 1s;
+ }
+
+ .contato a:active,
+ .contato a:hover {
+   text-decoration: none;
+   text-shadow: black 0px 0px 30px;
+ }
+
+ .contato i {
+   color: black;
+ }
