@@ -1,3 +1,3 @@
 # matheusstopalight
 versão light do site
-https://ourimatheus.github.io/matheusstopa/
+versão original: https://ourimatheus.github.io/matheusstopa/
